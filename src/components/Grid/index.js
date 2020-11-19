@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { View } from 'react-native';
 import GraduationUnit from './GraduationUnit';
 import styles from './styles';
@@ -6,13 +7,13 @@ import styles from './styles';
 export default class Grid extends Component {
   static propTypes = {
     content: PropTypes.any.isRequired,
-    contentContainerStyle: View.propTypes.style,
+    contentContainerStyle: PropTypes.any,
     graduation: PropTypes.number.isRequired,
     horizontal: PropTypes.bool.isRequired,
     labelWrapperFlex: PropTypes.number.isRequired,
     lineColor: PropTypes.string,
     maxValue: PropTypes.number.isRequired,
-    style: View.propTypes.style,
+    style: PropTypes.any,
     unitFlex: PropTypes.number.isRequired,
   };
 

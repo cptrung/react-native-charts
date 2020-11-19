@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { View } from 'react-native';
 import { flatten, max, pluck, zip } from 'underscore';
 import { dataSetPropType } from '../../constants/propTypes';
@@ -10,12 +11,12 @@ export default class BarChart extends Component {
   static propTypes = {
     barSize: PropTypes.number,
     barSpacing: PropTypes.number,
-    barStyle: View.propTypes.style,
+    barStyle: PropTypes.any,
     dataSets: PropTypes.arrayOf(dataSetPropType).isRequired,
     graduation: PropTypes.number,
     horizontal: PropTypes.bool,
     showGrid: PropTypes.bool.isRequired,
-    style: View.propTypes.style,
+    style: PropTypes.any,
   };
 
   static defaultProps = {
